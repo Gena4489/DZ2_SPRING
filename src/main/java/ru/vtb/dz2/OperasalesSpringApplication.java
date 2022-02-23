@@ -7,10 +7,10 @@ import ru.vtb.dz2.model.Premiere;
 import ru.vtb.dz2.services.PremiereService;
 
 @SpringBootApplication
-public class AviasalesSpringApplication {
+public class OperasalesSpringApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext ctx = SpringApplication.run(AviasalesSpringApplication.class, args);
+        ConfigurableApplicationContext ctx = SpringApplication.run(OperasalesSpringApplication.class, args);
 
         PremiereService premiereService = ctx.getBean(PremiereService.class);
 
