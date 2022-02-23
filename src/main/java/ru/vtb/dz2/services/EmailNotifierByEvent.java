@@ -13,11 +13,11 @@ public class EmailNotifierByEvent implements ApplicationListener<PremiereEvent> 
     public void onApplicationEvent(PremiereEvent event) {
 
         String method = null;
-        if (event.getEvenInfo().getMethod().equals("addPremiere")) {
+        if (event.getEvenInfo().getMethod().equalsIgnoreCase("addPremiere")) {
             method = "Анонс мероприятия:";
         } else if (event.getEvenInfo().getMethod().equalsIgnoreCase("deletePremiere")) {
             method = "Перенос мероприятия:";
-        } else if (event.getEvenInfo().getMethod().equals("buyTickets")) {
+        } else if (event.getEvenInfo().getMethod().equalsIgnoreCase("buyTickets")) {
             method = "Покупка билетов на мероприятие:";
         }
 
